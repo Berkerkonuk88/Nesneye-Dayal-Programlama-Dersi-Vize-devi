@@ -1,1 +1,2 @@
 # Nesneye-Dayal-Programlama-Dersi-Vize-devi
+hjashkafbhjejksef 
