@@ -34,6 +34,6 @@ nextInt() ve nextLine() kullanıyor
 
 AD:BERKER
 SOYAD:KONUK
-
+ÖĞRENCİ NUMARASI:20230108038
 
 
