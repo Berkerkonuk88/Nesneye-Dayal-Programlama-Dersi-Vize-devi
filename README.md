@@ -32,4 +32,8 @@ Kullanıcıdan veri almak için
 
 nextInt() ve nextLine() kullanıyor
 
+AD:BERKER
+SOYAD:KONUK
+
+
 
