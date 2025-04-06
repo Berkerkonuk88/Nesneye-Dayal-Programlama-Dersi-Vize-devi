@@ -30,7 +30,7 @@ public class Main {
             System.out.println("5--- Müşteri Listesi ---");
             System.out.println("6--- Bilet Listesi ---");
             System.out.println("7--- Çıkış ---");
-            System.out.print(" 11Seçiminiz: ");
+            System.out.print("11Seçiminiz:");
 
             secim = input.nextInt();
             input.nextLine();
