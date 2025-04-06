@@ -1,4 +1,4 @@
-# Nesneye-Dayal-Programlama-Dersi-Vize-devi
+# Nesneye-Dayal-Programlama-Dersi-Vize-Ödevi
 Bu program bir sinema bileti satış sistemi yapıyor. Şu temel özellikleri var:
 
 Kullandığım Yapılar
