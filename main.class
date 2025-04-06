@@ -1,0 +1,96 @@
+import java.util.Scanner;
+
+public class SinemaBiletSistemi {
+    static String[] filmler = new String[10];
+    static String[] turler = new String[10];
+    static int[] sureler = new int[10];
+    static String[] musteriler = new String[20];
+    static String[] emailler = new String[20];
+    static int filmAdet = 0;
+    static int musteriAdet = 0;
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int secim;
+
+        while(true) {
+            System.out.println("\n*** Sinema Bilet Sistemi ***");
+            System.out.println("1- Film Ekle");
+            System.out.println("2- Müşteri Ekle");
+            System.out.println("3- Film Listesi");
+            System.out.println("4- Müşteri Listesi");
+            System.out.println("5- Çıkış");
+            System.out.print("Seçiminiz: ");
+
+            secim = input.nextInt();
+            input.nextLine();
+
+            if (secim == 1) filmEkle(input);
+            else if (secim == 2) musteriEkle(input);
+            else if (secim == 3) filmListele();
+            else if (secim == 4) musteriListele();
+            else if (secim == 5) break;
+            else System.out.println("Geçersiz seçim!");
+        }
+    }
+
+    static void filmEkle(Scanner scan) {
+        if(filmAdet >= 10) {
+            System.out.println("Film kapasitesi doldu!");
+            return;
+        }
+
+        System.out.print("Film adı: ");
+        filmler[filmAdet] = scan.nextLine();
+
+        System.out.print("Türü: ");
+        turler[filmAdet] = scan.nextLine();
+
+        System.out.print("Süre (dk): ");
+        sureler[filmAdet] = scan.nextInt();
+        scan.nextLine();
+
+        filmAdet++;
+        System.out.println("Film eklendi.");
+    }
+
+    static void musteriEkle(Scanner scan) {
+        if(musteriAdet >= 20) {
+            System.out.println("Müşteri kapasitesi doldu!");
+            return;
+        }
+
+        System.out.print("Ad: ");
+        musteriler[musteriAdet] = scan.nextLine();
+
+        System.out.print("Email: ");
+        emailler[musteriAdet] = scan.nextLine();
+
+        musteriAdet++;
+        System.out.println("Müşteri eklendi.");
+    }
+
+    static void filmListele() {
+        if(filmAdet == 0) {
+            System.out.println("Film yok!");
+            return;
+        }
+
+        System.out.println("\nFilm Listesi");
+        for(int i=0; i<filmAdet; i++) {
+            System.out.println(i + "- " + filmler[i] + " | " + turler[i] + " | " + sureler[i] + "dk");
+        }
+    }
+
+    static void musteriListele() {
+        if(musteriAdet == 0) {
+            System.out.println("Müşteri yok!");
+            return;
+        }
+
+        System.out.println("\nMüşteri Listesi");
+        for(int i=0; i<musteriAdet; i++) {
+            System.out.println(i + "- " + musteriler[i] + " | " + emailler[i]);
+        }
+    }
+}
